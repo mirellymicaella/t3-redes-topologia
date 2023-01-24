@@ -1,23 +1,55 @@
-hostname R3_Joanelly
+hostname R3_Andre
 buggy
 !
 !
 vrf definition v1
  exit
 !
+router rip4 1
+ vrf v1
+ redistribute connected
+ exit
+!
+router rip6 1
+ vrf v1
+ redistribute connected
+ exit
+!
 interface ethernet1
+ description R3 -> R1
+ vrf forwarding v1
+ ipv4 address 56.19.1.2 255.255.255.252
+ ipv6 address 2019:56:1::2 ffff:ffff:ffff:ffff::
+ router rip4 1 enable
+ router rip6 1 enable
+ no shutdown
+ no log-link-change
+ exit
+!
+interface ethernet2
  description R3 -> R2
  vrf forwarding v1
- ipv4 address 66.19.2.2 255.255.255.252
- ipv6 address 2019:66:2::2 ffff:ffff:ffff:ffff::
+ ipv4 address 56.19.5.2 255.255.255.252
+ ipv6 address 2019:56:5::2 ffff:ffff:ffff:ffff::
+ router rip4 1 enable
+ router rip6 1 enable
+ no shutdown
+ no log-link-change
+ exit
+!
+interface ethernet3
+ description R3 -> R4
+ vrf forwarding v1
+ ipv4 address 56.19.6.1 255.255.255.252
+ ipv6 address 2019:56:6::1 ffff:ffff:ffff:ffff::
+ router rip4 1 enable
+ router rip6 1 enable
  no shutdown
  no log-link-change
  exit
 !
 !
-ipv4 route v1 0.0.0.0 0.0.0.0 66.19.2.1
 !
-ipv6 route v1 :: :: 2019:66:2::1
 !
 !
 !
@@ -36,5 +68,3 @@ server telnet tel
  vrf v1
  exit
 !
-!
-end

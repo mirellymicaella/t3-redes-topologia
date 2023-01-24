@@ -1,15 +1,27 @@
-hostname R2_Joanelly
+hostname R2_Andre
 buggy
 !
 !
 vrf definition v1
  exit
 !
+router rip4 1
+ vrf v1
+ redistribute connected
+ exit
+!
+router rip6 1
+ vrf v1
+ redistribute connected
+ exit
+!
 interface ethernet1
- description R2 -> R1
+ description R2 -> R4
  vrf forwarding v1
- ipv4 address 66.19.1.2 255.255.255.252
- ipv6 address 2019:66:1::2 ffff:ffff:ffff:ffff::
+ ipv4 address 56.19.4.1 255.255.255.252
+ ipv6 address 2019:56:4::1 ffff:ffff:ffff:ffff::
+ router rip4 1 enable
+ router rip6 1 enable
  no shutdown
  no log-link-change
  exit
@@ -17,25 +29,27 @@ interface ethernet1
 interface ethernet2
  description R2 -> R3
  vrf forwarding v1
- ipv4 address 66.19.2.1 255.255.255.252
- ipv6 address 2019:66:2::1 ffff:ffff:ffff:ffff::
+ ipv4 address 56.19.5.1 255.255.255.252
+ ipv6 address 2019:56:5::1 ffff:ffff:ffff:ffff::
+ router rip4 1 enable
+ router rip6 1 enable
  no shutdown
  no log-link-change
  exit
 !
 interface ethernet3
- description R2 -> R4
+ description R2 -> R1
  vrf forwarding v1
- ipv4 address 66.19.3.1 255.255.255.252
- ipv6 address 2019:66:3::1 ffff:ffff:ffff:ffff::
+ ipv4 address 56.19.3.2 255.255.255.252
+ ipv6 address 2019:56:3::2 ffff:ffff:ffff:ffff::
+ router rip4 1 enable
+ router rip6 1 enable
  no shutdown
  no log-link-change
  exit
 !
 !
-ipv4 route v1 66.19.4.0 255.255.255.252 66.19.3.2
 !
-ipv6 route v1 2019:66:4:: ffff:ffff:ffff:ffff:: 2019:66:3::2
 !
 !
 !

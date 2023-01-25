@@ -1,5 +1,5 @@
 RTR=rtr.jar
-HWSW=rip/andre_cunha_
+HWSW=rip/joanelly-
 
 # Executa os roteadores
 tmux new-session -d -s rare 'java -jar '$RTR' routersc '$HWSW'r1-hw.txt '$HWSW'r1-sw.txt'

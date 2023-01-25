@@ -1,4 +1,4 @@
-hostname R1_Andre
+hostname R1_Joanelly
 buggy
 !
 !
@@ -16,10 +16,10 @@ router rip6 1
  exit
 !
 interface ethernet1
- description R1 -> R3
+ description R1 to R2
  vrf forwarding v1
- ipv4 address 56.19.1.1 255.255.255.252
- ipv6 address 2019:56:1::1 ffff:ffff:ffff:ffff::
+ ipv4 address 20.19.66.1 255.255.255.252
+ ipv6 address 2019:66:1::1 ffff:ffff:ffff:ffff::
  router rip4 1 enable
  router rip6 1 enable
  no shutdown
@@ -27,10 +27,10 @@ interface ethernet1
  exit
 !
 interface ethernet2
- description R1 -> R4
+ description R1 to R3
  vrf forwarding v1
- ipv4 address 56.19.2.1 255.255.255.252
- ipv6 address 2019:56:2::1 ffff:ffff:ffff:ffff::
+ ipv4 address 20.19.67.1 255.255.255.252
+ ipv6 address 2019:66:2::1 ffff:ffff:ffff:ffff::
  router rip4 1 enable
  router rip6 1 enable
  no shutdown
@@ -38,10 +38,10 @@ interface ethernet2
  exit
 !
 interface ethernet3
- description R1 -> R2
+ description R1 to R4
  vrf forwarding v1
- ipv4 address 56.19.3.1 255.255.255.252
- ipv6 address 2019:56:3::1 ffff:ffff:ffff:ffff::
+ ipv4 address 20.19.68.1 255.255.255.252
+ ipv6 address 2019:66:3::1 ffff:ffff:ffff:ffff::
  router rip4 1 enable
  router rip6 1 enable
  no shutdown

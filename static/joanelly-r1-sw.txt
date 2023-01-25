@@ -8,14 +8,14 @@ vrf definition v1
 interface ethernet1
  description R1 -> R2
  vrf forwarding v1
- ipv4 address 66.19.1.1 255.255.255.252
+ ipv4 address 20.19.66.1 255.255.255.252
  ipv6 address 2019:66:1::1 ffff:ffff:ffff:ffff::
  no shutdown
  no log-link-change
  exit
 !
 !
-ipv4 route v1 0.0.0.0 0.0.0.0 66.19.1.2
+ipv4 route v1 0.0.0.0 0.0.0.0 20.19.66.2
 !
 ipv6 route v1 :: :: 2019:66:1::2
 !

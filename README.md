@@ -64,7 +64,7 @@ traceroute 20.19.69.2 vrf v1
 ![image](https://user-images.githubusercontent.com/45270882/215183590-c5eaba5a-c43e-4024-b192-96a5689f92d5.png)
 
 
-Teste de ping e traceroute no roteador R1 para o roteador R2 usando ipv6:
+## Teste de ping e traceroute no roteador R1 para o roteador R5 usando ipv6:
 
 ```C
 ping 2019:66:4::2 vrf v1

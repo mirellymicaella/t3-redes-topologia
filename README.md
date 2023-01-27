@@ -128,23 +128,24 @@ Podemos ver no terminal do roteador o aviso de que chega um "datagram" que os vi
 ![image](https://user-images.githubusercontent.com/45270882/214987186-b7b8e95a-bc99-455d-ae10-29258fa705b8.png)
 
 
-## Teste de ping e traceroute no roteador R1 para o roteador R2 usando ipv4:
+## Teste de ping e traceroute no roteador R1 para o roteador R4 usando ipv4:
 
 ```C
 ping 20.19.69.2   vrf v1
 traceroute 20.19.69.2   vrf v1
 ```
 
-![image](https://user-images.githubusercontent.com/45270882/215187581-bf83ee06-bfd1-4c6c-880f-3f94d61d8a4b.png)
+![image](https://user-images.githubusercontent.com/45270882/215200068-81ddda4d-4368-412e-9882-b67bb45e25ff.png)
 
 
-## Teste de ping e traceroute no roteador R1 para o roteador R2 usando ipv6:
+
+## Teste de ping e traceroute no roteador R1 para o roteador R4 usando ipv6:
 ```C
 ping 2019:66:4::2  vrf v1
 traceroute 2019:66:4::2 vrf v1
 ```
+![image](https://user-images.githubusercontent.com/45270882/215200250-0da10493-9efd-4a70-9ac4-f0de9172ae8e.png)
 
-![image](https://user-images.githubusercontent.com/45270882/215187618-a0c6ce12-7a7a-41db-915f-765c94390e83.png)
 
 Como podemos visualizar nas imagens acima, utilizando o ipv4 o caminho seguido pacote é R1 para R3 que chega a R4. Já no ipv6, é realizada a paasagem do pacote diretamente entre o R1 para o R4, sem passar pelo R3 (pode-se questionar se foi escolhido o caminho mais rápido na rede).
 

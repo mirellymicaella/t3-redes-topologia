@@ -1,7 +1,6 @@
 hostname R4_Joanelly
 buggy
 !
-!
 vrf definition v1
  exit
 !
@@ -47,15 +46,6 @@ interface ethernet3
  no shutdown
  no log-link-change
  exit
-!
-!
-!
-!
-!
-!
-!
-!
-!
 !
 !
 !

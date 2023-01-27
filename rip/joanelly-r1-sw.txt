@@ -1,7 +1,6 @@
 hostname R1_Joanelly
 buggy
 !
-!
 vrf definition v1
  exit
 !
@@ -52,21 +51,11 @@ interface ethernet3
 !
 !
 !
-!
-!
-!
-!
-!
-!
-!
-!
-!
 server telnet tel
  security protocol telnet
  no exec authorization
  no login authentication
  vrf v1
  exit
-!
 !
 end

@@ -1,7 +1,6 @@
 hostname R4_Joanelly
 buggy
 !
-!
 vrf definition v1
  exit
 !
@@ -34,18 +33,11 @@ ipv6 route v1 2019:66:2:: ffff:ffff:ffff:ffff:: 2019:66:3::1
 !
 !
 !
-!
-!
-!
-!
-!
-!
 server telnet tel
  security protocol telnet
  no exec authorization
  no login authentication
  vrf v1
  exit
-!
 !
 end

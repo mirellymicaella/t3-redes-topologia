@@ -19,8 +19,7 @@ Para finalizar tudo, basta chamar o script com a flag "-k":
 ./script_1.sh -k
 ```
 
-Para realizar alguns testes, basta entrar no telnet correspondente e rodar os seguintes comandos: (neste
-caso um exemplo para o ip pode ser 58.16.1.1 por exemplo)
+Para realizar alguns testes, basta entrar no telnet correspondente e rodar os seguintes comandos:
 
 ```yml
 ping <ip> /vrf v1
@@ -46,13 +45,13 @@ Testes realizados na Topologia 1
 ## Mostrando a tabela de rotas para ipv4 e ipv6:
 
 `show ipv4 route v1`
-
-
+![image](https://user-images.githubusercontent.com/45270882/215189632-3bcddc12-da5c-4032-928d-44b112ce29cf.png)
 
 
 `show ipv6 route v1`
 
 
+![image](https://user-images.githubusercontent.com/45270882/215189664-3b7cb1cc-1463-47c2-8764-ece889c7ef84.png)
 
 
 ## Teste de ping e traceroute no roteador R1 para o roteador R5 usando ipv4:

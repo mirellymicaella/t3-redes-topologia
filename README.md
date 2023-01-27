@@ -130,7 +130,6 @@ Podemos ver no terminal do roteador o aviso de que chega um "datagram" que os vi
 
 ## Teste de ping e traceroute no roteador R1 para o roteador R2 usando ipv4:
 
-R1->R3->R4
 ```C
 ping 20.19.69.2   vrf v1
 traceroute 20.19.69.2   vrf v1
@@ -147,6 +146,7 @@ traceroute 2019:66:4::2 vrf v1
 
 ![image](https://user-images.githubusercontent.com/45270882/215187618-a0c6ce12-7a7a-41db-915f-765c94390e83.png)
 
+Como podemos visualizar nas imagens acima, utilizando o ipv4 o caminho seguido pacote é R1 para R3 que chega a R4. Já no ipv6, é realizada a paasagem do pacote diretamente entre o R1 para o R4, sem passar pelo R3 (pode-se questionar se foi escolhido o caminho mais rápido na rede).
 
 Desligando a interface eth2 do R3:
 

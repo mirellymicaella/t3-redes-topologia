@@ -161,6 +161,13 @@ Podemos observar que em R3 houve um aviso no terminal, mostrando que os vizinhos
 
 ![71c6b55c-6829-41bf-bc67-fc0e0dfaa5cd](https://user-images.githubusercontent.com/45270882/214994574-e717b2a6-83e8-425f-a1ad-c97a72c4a13a.png)
 
+Refazendo os pings ipv4 e ipv6:
+
+![image](https://user-images.githubusercontent.com/45270882/215198446-53ebd42b-f1fd-488c-a002-1790ad56307c.png)
+![image](https://user-images.githubusercontent.com/45270882/215198562-e8588f08-79aa-45d9-9a96-c14fb1cbd9c4.png)
+
+
+Observando as tabelas após:
 ![image](https://user-images.githubusercontent.com/45270882/215187649-6f142f59-6fed-4087-a970-3075a842458d.png)
 
 ![image](https://user-images.githubusercontent.com/45270882/215187700-2b4c5838-93d5-409b-b8c9-c4d552dee60d.png)

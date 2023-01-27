@@ -4,7 +4,7 @@ Para executar, basta chamar o script desejado. Por exemplo, para rodar a primeir
 executar:
 
 ```yml
-./script_1.sh
+./script-rip.sh
 ```
 
 Dessa forma, todos os roteadores serão "levantados" e também conexões/janelas do Telnet para cada
@@ -13,17 +13,13 @@ roteador serão abertas.
 **Obs: pode ser necessário ajustar o tempo de sleep (sleep 5) entre os comandos para iniciar os roteadores e o
 comando para abrir os terminais telnet devido ao tempo necessário para "subir" os roteadores ser diferente em
 cada computador...*
-Para finalizar tudo, basta chamar o script com a flag "-k":
 
-```yml
-./script_1.sh -k
-```
 
 Para realizar alguns testes, basta entrar no telnet correspondente e rodar os seguintes comandos:
 
 ```yml
-ping <ip> /vrf v1
-traceroute <ip> /vrf v1
+ping <ip> vrf v1
+traceroute <ip> vrf v1
 ```
 
 Para desativar alguma interface, entrar no menu de configuração, depois no menu da interface desejada e

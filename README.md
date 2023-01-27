@@ -35,3 +35,38 @@ conf t
 int eth1
 shutdown
 ```
+
+# Topologia 1 
+Rede da topologia 1
+
+Na topologia 1, temos uma rede com 5 elementos, implementada com roteamento estático.
+
+Testes realizados na Topologia 1
+
+## Mostrando a tabela de rotas para ipv4 e ipv6:
+
+`show ipv4 route v1`
+
+![image](https://user-images.githubusercontent.com/45270882/214974499-606ecaa5-a29a-44f4-b76c-2819a867fac2.png)
+
+`show ipv6 route v1`
+
+![image](https://user-images.githubusercontent.com/45270882/214974662-ac5685ce-1e3a-417e-a808-f9c87b2a5ef6.png)
+
+## Teste de ping e traceroute no roteador R1 para o roteador R2 usando ipv4:
+
+```C
+ping 20.19.66.1 vrf v1
+traceroute 20.19.66.1 /vrf v1
+```
+
+![image](https://user-images.githubusercontent.com/45270882/214976281-d19e0e7e-00b6-4b0b-8d0e-8eb050e5e19f.png)
+
+
+Teste de ping e traceroute no roteador R1 para o roteador R2 usando ipv6:
+
+```C
+ping 2019:66:1::1 /vrf v1
+traceroute 2019:66:1::1 /vrf v1
+```
+![image](https://user-images.githubusercontent.com/45270882/214976317-3d425edb-2bef-46c9-bcd7-2f7c88eee158.png)

@@ -75,7 +75,7 @@ traceroute 2019:66:4::2 vrf v1
 ![image](https://user-images.githubusercontent.com/45270882/215183616-92289ed6-e960-4291-88c7-2d4e91797f7c.png)
 
 
-Desligando a interface eth1 do R2:
+Desligando a interface eth1 do R2, para que, como demonstrado no desenho, o R1 não tenha conexão alguma com o R5:
 
 ```yml
 conf t

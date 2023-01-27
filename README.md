@@ -43,6 +43,8 @@ Na topologia 1, temos uma rede com 5 elementos, implementada com roteamento est�
 ##  Mostrando a tabela de rotas para ipv4 e ipv6: </h4>
 
 `show ipv4 route v1`
+
+
 ![image](https://user-images.githubusercontent.com/45270882/215189632-3bcddc12-da5c-4032-928d-44b112ce29cf.png)
 
 
@@ -167,8 +169,12 @@ Refazendo os pings ipv4 e ipv6:
 ![image](https://user-images.githubusercontent.com/45270882/215198446-53ebd42b-f1fd-488c-a002-1790ad56307c.png)
 ![image](https://user-images.githubusercontent.com/45270882/215198562-e8588f08-79aa-45d9-9a96-c14fb1cbd9c4.png)
 
+Ao fazer o traceroute ipv4, é possível visualizar que os pacotes não chegam mais ao R4. Já no traceroute ipv6, como ele não realiza o caminho passando pelo R3, os pacotes são transmitidos normalmente.
+
 
 Observando as tabelas após:
 ![image](https://user-images.githubusercontent.com/45270882/215187649-6f142f59-6fed-4087-a970-3075a842458d.png)
 
 ![image](https://user-images.githubusercontent.com/45270882/215187700-2b4c5838-93d5-409b-b8c9-c4d552dee60d.png)
+
+Diferente de alguns casos, escrevemos os comandos logo em seguida de desligar o eth2 do R3 e em poucos segundos as novas rotas já foram reescritas.

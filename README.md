@@ -144,7 +144,8 @@ traceroute 20.19.69.2   vrf v1
 ping 2019:66:4::2  vrf v1
 traceroute 2019:66:4::2 vrf v1
 ```
-![image](https://user-images.githubusercontent.com/45270882/215200250-0da10493-9efd-4a70-9ac4-f0de9172ae8e.png)
+![image](https://user-images.githubusercontent.com/45270882/215200897-a7267c93-b2be-4a5d-9ef7-57e1214804b3.png)
+
 
 
 Como podemos visualizar nas imagens acima, utilizando o ipv4 o caminho seguido pacote é R1 para R3 que chega a R4. Já no ipv6, é realizada a paasagem do pacote diretamente entre o R1 para o R4, sem passar pelo R3 (pode-se questionar se foi escolhido o caminho mais rápido na rede).

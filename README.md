@@ -34,6 +34,9 @@ shutdown
 # Topologia 1 
 Rede da topologia 1
 
+![image](https://user-images.githubusercontent.com/45270882/215201793-29d3615a-8678-48ba-8f86-bcca95e4f871.png)
+
+
 Na topologia 1, temos uma rede com 5 elementos, implementada com roteamento estático.
 
 Testes realizados na Topologia 1
@@ -92,7 +95,11 @@ Concluimos que os pacotes não chegam até R2, porém se a interface eth1 for li
 # Rede da topologia 2
 Na topologia 2, temos uma rede Full-mesh implementada com o algoritmo de roteamento RIP (mais
 precisamente RIP2).
+
+![image](https://user-images.githubusercontent.com/45270882/215201943-013fc8d6-1e0b-4402-ae56-ba3c08d4ead3.png)
+
 Testes realizados na Topologia 2
+
 
 ## Mostrando a tabela de rotas para ipv4 e ipv6:
 

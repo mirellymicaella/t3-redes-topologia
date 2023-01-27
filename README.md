@@ -49,33 +49,46 @@ Testes realizados na Topologia 1
 
 
 
+
 `show ipv6 route v1`
 
 
 
-## Teste de ping e traceroute no roteador R1 para o roteador R2 usando ipv4:
+
+## Teste de ping e traceroute no roteador R1 para o roteador R5 usando ipv4:
 
 ```C
-ping 20.19.66.1 vrf v1
-traceroute 20.19.66.1 /vrf v1
+ping 20.19.69.2 vrf v1
+traceroute 20.19.69.2 vrf v1
 ```
 
-
+![image](https://user-images.githubusercontent.com/45270882/215183590-c5eaba5a-c43e-4024-b192-96a5689f92d5.png)
 
 
 Teste de ping e traceroute no roteador R1 para o roteador R2 usando ipv6:
 
 ```C
-ping 2019:66:1::1 /vrf v1
-traceroute 2019:66:1::1 /vrf v1
+ping 2019:66:4::2 vrf v1
+traceroute 2019:66:4::2 vrf v1
 ```
 
 
+![image](https://user-images.githubusercontent.com/45270882/215183616-92289ed6-e960-4291-88c7-2d4e91797f7c.png)
 
 
+Desligando a interface eth1 do R2:
 
+```yml
+conf t
+int eth1
+shutdown
+```
 
+Novamente ralizamos os testes de ping e traceroute no roteador R1 para o roteador R2 usando ipv4 e ipv6:
 
+![image](https://user-images.githubusercontent.com/45270882/215184168-5e992f60-75b9-4406-a773-93ca986c7b8d.png)
+
+![image](https://user-images.githubusercontent.com/45270882/215184205-84a2926b-a572-48a5-9008-315e14f2479b.png)
 
 
 # Rede da topologia 2
@@ -121,7 +134,8 @@ ping 20.19.69.2   vrf v1
 traceroute 20.19.69.2   vrf v1
 ```
 
-![image](https://user-images.githubusercontent.com/45270882/214989601-30e63bfb-ad37-4697-97d9-56644f09405e.png)
+![image](https://user-images.githubusercontent.com/45270882/215187581-bf83ee06-bfd1-4c6c-880f-3f94d61d8a4b.png)
+
 
 ## Teste de ping e traceroute no roteador R1 para o roteador R2 usando ipv6:
 ```C
@@ -129,7 +143,8 @@ ping 2019:66:4::2  vrf v1
 traceroute 2019:66:4::2 vrf v1
 ```
 
-![image](https://user-images.githubusercontent.com/45270882/214993368-2538fec9-097a-42e9-8871-1a839ca8390e.png)
+![image](https://user-images.githubusercontent.com/45270882/215187618-a0c6ce12-7a7a-41db-915f-765c94390e83.png)
+
 
 Desligando a interface eth2 do R3:
 
@@ -144,3 +159,6 @@ Podemos observar que em R3 houve um aviso no terminal, mostrando que os vizinhos
 
 ![71c6b55c-6829-41bf-bc67-fc0e0dfaa5cd](https://user-images.githubusercontent.com/45270882/214994574-e717b2a6-83e8-425f-a1ad-c97a72c4a13a.png)
 
+![image](https://user-images.githubusercontent.com/45270882/215187649-6f142f59-6fed-4087-a970-3075a842458d.png)
+
+![image](https://user-images.githubusercontent.com/45270882/215187700-2b4c5838-93d5-409b-b8c9-c4d552dee60d.png)

@@ -75,6 +75,7 @@ traceroute 2019:66:4::2 vrf v1
 ![image](https://user-images.githubusercontent.com/45270882/215183616-92289ed6-e960-4291-88c7-2d4e91797f7c.png)
 
 
+Podemos reparar que o caminho realizado entre os roteadores para a comunicação é: R1 para R2 para R4 e finalmente chegando ao R5.
 Desligando a interface eth1 do R2, para que, como demonstrado no desenho, o R1 não tenha conexão alguma com o R5:
 
 ```yml
@@ -83,11 +84,13 @@ int eth1
 shutdown
 ```
 
-Novamente ralizamos os testes de ping e traceroute no roteador R1 para o roteador R2 usando ipv4 e ipv6:
+Novamente ralizamos os testes de ping e traceroute no roteador R1 para o roteador R5 usando ipv4 e ipv6:
 
 ![image](https://user-images.githubusercontent.com/45270882/215184168-5e992f60-75b9-4406-a773-93ca986c7b8d.png)
 
 ![image](https://user-images.githubusercontent.com/45270882/215184205-84a2926b-a572-48a5-9008-315e14f2479b.png)
+
+Concluimos que os pacotes não chegam até R2, porém se a interface eth1 for ligada novamente, a rede volta a funcionar sem problemas.
 
 
 # Rede da topologia 2

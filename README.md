@@ -34,7 +34,8 @@ shutdown
 # Topologia 1 
 Rede da topologia 1
 
-![image](https://user-images.githubusercontent.com/45270882/215201793-29d3615a-8678-48ba-8f86-bcca95e4f871.png)
+![image](https://user-images.githubusercontent.com/45270882/215202589-79a8e1dd-8ad5-4bca-97ff-9b33bc3da4fe.png)
+
 
 
 Na topologia 1, temos uma rede com 5 elementos, implementada com roteamento estático.

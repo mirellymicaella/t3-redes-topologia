@@ -40,9 +40,7 @@ Rede da topologia 1
 
 Na topologia 1, temos uma rede com 5 elementos, implementada com roteamento estático.
 
-Testes realizados na Topologia 1
-
-## Mostrando a tabela de rotas para ipv4 e ipv6:
+##  Mostrando a tabela de rotas para ipv4 e ipv6: </h4>
 
 `show ipv4 route v1`
 ![image](https://user-images.githubusercontent.com/45270882/215189632-3bcddc12-da5c-4032-928d-44b112ce29cf.png)
@@ -98,9 +96,6 @@ Na topologia 2, temos uma rede Full-mesh implementada com o algoritmo de roteame
 precisamente RIP2).
 
 ![image](https://user-images.githubusercontent.com/45270882/215201943-013fc8d6-1e0b-4402-ae56-ba3c08d4ead3.png)
-
-Testes realizados na Topologia 2
-
 
 ## Mostrando a tabela de rotas para ipv4 e ipv6:
 

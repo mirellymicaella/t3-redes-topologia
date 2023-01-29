@@ -1,5 +1,7 @@
 # T3 Redes - Roteamento
 
+É necessário informar que a matricula utilizada para gerar as máscaras do ipv4 e ipv6, foi a matricula da aluna Joana Venturin Loureiro: 2019109666.
+
 Para executar, basta chamar o script desejado. Por exemplo, para rodar a primeira topologia, bastar
 executar:
 

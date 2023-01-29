@@ -76,6 +76,7 @@ traceroute 2019:66:4::2 vrf v1
 
 
 Podemos reparar que o caminho realizado entre os roteadores para a comunicação é: R1 para R2 para R4 e finalmente chegando ao R5.
+
 Desligando a interface eth1 do R2, para que, como demonstrado no desenho, o R1 não tenha conexão alguma com o R5:
 
 ```yml
@@ -149,7 +150,7 @@ traceroute 2019:66:4::2 vrf v1
 
 
 
-Como podemos visualizar nas imagens acima, utilizando o ipv4 o caminho seguido pacote é R1 para R3 que chega a R4. Já no ipv6, é realizada a paasagem do pacote diretamente entre o R1 para o R4, sem passar pelo R3 (pode-se questionar se foi escolhido o caminho mais rápido na rede).
+Como podemos visualizar nas imagens acima, utilizando o ipv4 o caminho seguido pacote é R1 para R3 que chega a R4. Já no ipv6, é realizada a passagem do pacote diretamente entre o R1 para o R4, sem passar pelo R3 (pode-se questionar se foi escolhido o caminho mais rápido na rede).
 
 Desligando a interface eth2 do R3:
 
@@ -172,9 +173,12 @@ Refazendo os pings ipv4 e ipv6:
 Ao fazer o traceroute ipv4, é possível visualizar que os pacotes não chegam mais ao R4. Já no traceroute ipv6, como ele não realiza o caminho passando pelo R3, os pacotes são transmitidos normalmente.
 
 
+Após aproximadamente 2 minutos, utilizando ipv4, uma nova rota é criada para ser possível realizar a passagem do pacote entre o R1 e R4, como é possível observar na imagem a seguir. Lembrando que não é criada uma nova rota para o ipv6 já que o mesmo não utilizou o eth2 do R3 para realizar o caminho do R1 para o R4.
+
+![image](https://user-images.githubusercontent.com/58488905/215357967-5e4246f5-28e7-4670-a0d1-d0341e68b3a3.png)
+
 Observando as tabelas após:
-![image](https://user-images.githubusercontent.com/45270882/215187649-6f142f59-6fed-4087-a970-3075a842458d.png)
+![image](https://user-images.githubusercontent.com/58488905/215358016-9787b7e8-9c8d-4780-92b2-68912d96ac01.png)
 
 ![image](https://user-images.githubusercontent.com/45270882/215187700-2b4c5838-93d5-409b-b8c9-c4d552dee60d.png)
 
-Diferente de alguns casos, escrevemos os comandos logo em seguida de desligar o eth2 do R3 e em poucos segundos as novas rotas já foram reescritas.
